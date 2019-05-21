@@ -74,6 +74,9 @@
     <Compile Include="SideEffects\Before\Demo.cs" />
     <Compile Include="SideEffects\Before\Logger.cs" />
     <Compile Include="SideEffects\Before\MasterPlan.cs" />
+    <Compile Include="Test\MasterPlanService.cs" />
+    <Compile Include="Test\MasterPlan.cs" />
+    <Compile Include="Test\Participant.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
