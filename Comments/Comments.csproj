@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommentToFunction.cs" />
-    <Compile Include="CommentToVariable.cs" />
+    <None Include="CommentToFunction.cs" />
+    <None Include="CommentToVariable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

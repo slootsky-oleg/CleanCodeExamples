@@ -45,7 +45,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\Activity.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\Demo.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\ActualActivitySelector.cs" />
     <Compile Include="Test.cs" />
+    <Compile Include="TestAnswers\NameSelector\Activity.cs" />
+    <Compile Include="TestAnswers\NameSelector\ActivityActualNameSelector.cs" />
+    <Compile Include="TestAnswers\NameSelector\Demo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
