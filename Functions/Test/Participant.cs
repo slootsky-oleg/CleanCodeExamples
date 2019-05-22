@@ -9,6 +9,5 @@ namespace Functions.Test
 		public string Name { get; set; }
 		public DateTime AssignedFrom { get; set; }
 		public DateTime AssignedTo { get; set; }
-		
 	}
 }
