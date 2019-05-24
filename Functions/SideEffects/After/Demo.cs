@@ -17,7 +17,7 @@ namespace Functions.SideEffects.After
 
 			//Analyze(masterPlan);
 			//SendToExternalService(masterPlan);
-			//var ids = GetIds(masterPlan);
+			//var ids = GetActivityIds(masterPlan);
 
 			var logger = new Logger();
 			logger.Log(masterPlan.Activities);

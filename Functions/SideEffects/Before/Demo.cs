@@ -13,16 +13,20 @@ namespace Functions.SideEffects.Before
 				new Activity {Id = 3, Name = "C"},
 			};
 
+
+			//Real world: Get from DB
 			var masterPlan = new MasterPlan {Activities = activities};
 
 			//Analyze(masterPlan);
 			//SendToExternalService(masterPlan);
-			//var ids = GetIds(masterPlan);
+			//var ids = GetActivityIds(masterPlan);
 
 			var logger = new Logger();
 			logger.Log(masterPlan.Activities);
 
 			//SaveToDataBase(activities);
+
+			//Select From Activities: Two activities lost, 1 name changed
 		}
 	}
 }

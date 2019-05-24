@@ -8,10 +8,10 @@ namespace Functions.FunctionArguments._1_AfterFlagsToEnum
 		{
 			var movieService = new MovieService();
 
-			var tomorrow = DateTime.Now.AddDays(1);
+			var purchased = DateTime.Now.AddDays(1);
 
-			var expirationDate = movieService.GetMovieExpirationDate(LicensingModel.TwoDays, tomorrow);
-			var price = movieService.GetMoviePrice(LicensingModel.LifeLong, CustomerStatus.Advanced, tomorrow);
+			var expirationDate = movieService.GetMovieExpirationDate(LicensingModel.TwoDays, purchased);
+			var price = movieService.GetMoviePrice(LicensingModel.LifeLong, CustomerStatus.Advanced, purchased);
 		}
 	}
 }

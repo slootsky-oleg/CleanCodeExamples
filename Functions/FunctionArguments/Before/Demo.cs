@@ -8,10 +8,10 @@ namespace Functions.FunctionArguments.Before
 		{
 			var movieService = new MovieService();
 
-			var tomorrow = DateTime.Now.AddDays(1);
+			var purchased = DateTime.Now.AddDays(1);
 
-			var expirationDate = movieService.GetMovieExpirationDate(true, tomorrow);
-			var price = movieService.GetMoviePrice(false, true, tomorrow);
+			var expirationDate = movieService.GetMovieExpirationDate(true, purchased);
+			var price = movieService.GetMoviePrice(false, true, purchased);
 		}
 	}
 }
