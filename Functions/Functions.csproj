@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoOneThing\After\ParticipantsProvider.cs" />
+    <Compile Include="DoOneThing\Before\Course.cs" />
+    <Compile Include="DoOneThing\OrganizationalUnit.cs" />
     <Compile Include="DoOneThing\Before\ParticipantsProvider.cs" />
-    <Compile Include="DoOneThing\Course.cs" />
+    <Compile Include="DoOneThing\After\Course.cs" />
     <Compile Include="DoOneThing\Before\DBTable.cs" />
     <Compile Include="DoOneThing\Before\DbManager.cs" />
     <Compile Include="DoOneThing\After\ICourseRepository.cs" />

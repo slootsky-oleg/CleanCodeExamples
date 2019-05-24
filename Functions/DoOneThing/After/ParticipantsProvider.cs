@@ -11,12 +11,12 @@ namespace Functions.DoOneThing.After
 			this.courseRepository = courseRepository;
 		}
 
-		public int GetNumberOfCourseParticipants(int ownerId)
+		public int GetActiveCountByOrganizationalUnit(OrganizationalUnit organizationalUnit)
 		{
-			var courses = courseRepository.GetByOwner(ownerId);
+			var courses = courseRepository.GetByOwner(organizationalUnit);
 
 			return courses
-				.Select(c => c.Participants.Count)
+				.Select(c => c.ActiveParticipants.Count)
 				.Sum();
 		}
 	}

@@ -6,24 +6,24 @@ namespace Functions.DoOneThing.Before
 {
 	public class ParticipantsProvider
 	{
-		public int GetNumberOfCourseParticipants(int ownerId)
+		public int GetActiveCountByOrganizationalUnit(OrganizationalUnit organizationalUnit)
 		{
 			var db = new DbManager("...");
-			db.CreateCommand("[dbo].[spr_GetAllocations]");
-			db.AddIntegerParameter("tpId", ownerId);
+			db.CreateCommand("[dbo].[spr_CoursesByOrganizationalUnit]");
+			db.AddIntegerParameter("ouId", organizationalUnit.Id);
 			var courses = db.ExecuteDataTable().To<IEnumerable<Course>>();
 
 			int counter = 0;
 			foreach (var course in courses)
 			{
-				var participants = course
+				var activeParticipants = course
 					.Participants
 					.Where(x => x.IsA && x.IsB || x.IsC);
 
-				counter += participants.Count();
+				counter += activeParticipants.Count();
 
 				if (course.Name.Length > 150)
-					throw new InvalidOperationException($"Allocation {course.Id} Name is too long");
+					throw new InvalidOperationException($"Course {course.Id} Name is too long.");
 			}
 
 			return counter;

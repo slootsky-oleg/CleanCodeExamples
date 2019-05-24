@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "Functions\Func
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comments", "Comments\Comments.csproj", "{B665286C-C74A-49CC-805C-8AE283AFDB27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting", "Formatting\Formatting.csproj", "{18E951AF-B332-4786-A0D9-9C82A421BBFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B665286C-C74A-49CC-805C-8AE283AFDB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B665286C-C74A-49CC-805C-8AE283AFDB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B665286C-C74A-49CC-805C-8AE283AFDB27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E951AF-B332-4786-A0D9-9C82A421BBFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E951AF-B332-4786-A0D9-9C82A421BBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E951AF-B332-4786-A0D9-9C82A421BBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E951AF-B332-4786-A0D9-9C82A421BBFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
