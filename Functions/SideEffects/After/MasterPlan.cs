@@ -5,11 +5,25 @@ namespace Functions.SideEffects.After
 {
 	public class MasterPlan
 	{
-		public IReadOnlyList<Activity> Activities { get; }
+		private readonly IList<Activity> activities;
+
+		public IReadOnlyList<Activity> Activities => activities.ToList();
 
 		public MasterPlan(IEnumerable<Activity> activities)
 		{
-			Activities = activities?.ToList();
+			this.activities = activities?.ToList();
+		}
+
+		public void AddActivity(Activity activity)
+		{
+			ValidateActivity(activity);
+
+			activities.Add(activity);
+		}
+
+		private void ValidateActivity(Activity activity)
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

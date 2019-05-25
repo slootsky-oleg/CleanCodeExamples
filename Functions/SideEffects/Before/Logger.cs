@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Functions.SideEffects.Before
 {
@@ -17,7 +18,8 @@ namespace Functions.SideEffects.Before
 				}
 			}
 
-			activities.RemoveAll(x => x.Id > 1);
+			//activities.RemoveAll(x => x.Id > 1);
+			activities = activities.Take(1).ToList();
 		}
 	}
 }

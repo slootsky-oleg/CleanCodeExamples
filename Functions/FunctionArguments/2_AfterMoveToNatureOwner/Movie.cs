@@ -15,30 +15,22 @@ namespace Functions.FunctionArguments._2_AfterMoveToNatureOwner
 
 		public DateTime GetExpirationDate()
 		{
-			DateTime result;
-
 			switch (LicensingModel)
 			{
 				case LicensingModel.TwoDays:
-					result = Purchased.AddDays(2);
-					break;
+					return Purchased.AddDays(2);
 
 				case LicensingModel.LifeLong:
-					result = DateTime.MaxValue;
-					break;
+					return DateTime.MaxValue;
 
 				default:
 					throw new ArgumentOutOfRangeException();
 			}
-
-			return result;
 		}
 
 		public decimal GetPrice(CustomerStatus status)
 		{
 			var expirationDate = GetExpirationDate();
-			var hasDiscount = status == CustomerStatus.Advanced
-			                  && expirationDate >= DateTime.UtcNow;
 
 			decimal price;
 			switch (LicensingModel)
@@ -53,6 +45,9 @@ namespace Functions.FunctionArguments._2_AfterMoveToNatureOwner
 				default:
 					throw new ArgumentOutOfRangeException();
 			}
+
+			var hasDiscount = status == CustomerStatus.Advanced
+			                  && expirationDate >= DateTime.UtcNow;
 
 			if (hasDiscount)
 			{

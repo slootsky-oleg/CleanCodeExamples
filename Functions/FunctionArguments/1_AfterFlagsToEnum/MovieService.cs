@@ -6,23 +6,17 @@ namespace Functions.FunctionArguments._1_AfterFlagsToEnum
 	{
 		public DateTime GetMovieExpirationDate(LicensingModel licensingModel, DateTime purchased)
 		{
-			DateTime result;
-
 			switch (licensingModel)
 			{
 				case LicensingModel.TwoDays:
-					result = purchased.AddDays(2);
-					break;
+					return purchased.AddDays(2);
 
 				case LicensingModel.LifeLong:
-					result = DateTime.MaxValue;
-					break;
+					return DateTime.MaxValue;
 
 				default:
 					throw new ArgumentOutOfRangeException();
 			}
-
-			return result;
 		}
 
 		public decimal GetMoviePrice(LicensingModel licensingModel, CustomerStatus status, DateTime expirationDate)

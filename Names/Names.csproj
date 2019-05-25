@@ -50,7 +50,7 @@
     <Compile Include="TestAnswers\ActivitySelector\ActualActivitySelector.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="TestAnswers\NameSelector\Activity.cs" />
-    <Compile Include="TestAnswers\NameSelector\ActivityActualNameSelector.cs" />
+    <Compile Include="TestAnswers\NameSelector\ActualActivityNameSelector.cs" />
     <Compile Include="TestAnswers\NameSelector\Demo.cs" />
   </ItemGroup>
   <ItemGroup>

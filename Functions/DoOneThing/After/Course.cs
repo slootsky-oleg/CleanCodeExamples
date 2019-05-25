@@ -6,6 +6,8 @@ namespace Functions.DoOneThing.After
 {
 	public class Course
 	{
+		private const int MaxNameLength = 150;
+
 		private readonly IList<Participant> participants;
 
 		public string Name { get; }
@@ -17,7 +19,7 @@ namespace Functions.DoOneThing.After
 
 		public Course(int id, string name, IEnumerable<Participant> participants)
 		{
-			if (name.Length > 150)
+			if (name.Length > MaxNameLength)
 				throw new InvalidOperationException($"Course {id} Name is too long.");
 
 			Id = id;

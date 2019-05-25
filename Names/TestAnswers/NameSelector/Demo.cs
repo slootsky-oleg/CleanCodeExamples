@@ -5,7 +5,7 @@
 		public void Execute()
 		{
 			var sourceTemplateActivity = new Activity("name in Source template");
-			var selector = new ActivityActualNameSelector(
+			var selector = new ActualActivityNameSelector(
 				null,
 				sourceTemplateActivity,
 				null);

@@ -1,4 +1,7 @@
-﻿namespace Names.TestAnswers.ActivitySelector
+﻿using System;
+using System.Data;
+
+namespace Names.TestAnswers.ActivitySelector
 {
 	public class ActualActivitySelector
 	{
@@ -11,7 +14,7 @@
 				trainingProgramActivity
 				?? sourceTemplateActivity
 				?? baseLineActivity
-				?? null;
+				?? throw new InvalidOperationException();
 		}
 	}
 }

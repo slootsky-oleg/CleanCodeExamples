@@ -1,18 +1,20 @@
-﻿namespace Names.TestAnswers.NameSelector
+﻿using System;
+
+namespace Names.TestAnswers.NameSelector
 {
-	public class ActivityActualNameSelector
+	public class ActualActivityNameSelector
 	{
 		private const int MaxSimplifiedNameLength = 50;
 
 		private readonly string name;
 
-		public ActivityActualNameSelector(
+		public ActualActivityNameSelector(
 			Activity trainingProgramActivity,
 			Activity sourceTemplateActivity,
 			Activity baseLineActivity)
 		{
 			var activity = GetActualActivity(trainingProgramActivity, sourceTemplateActivity, baseLineActivity);
-			name = activity?.Name ?? string.Empty;
+			name = activity.Name;
 		}
 
 		public string GetName()
@@ -36,7 +38,7 @@
 				trainingProgramActivity
 				?? sourceTemplateActivity
 				?? baseLineActivity
-				?? null;
+				?? throw new InvalidOperationException();
 		}
 	}
 }
