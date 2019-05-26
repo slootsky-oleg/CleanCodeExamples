@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Names.TestAnswers.ActivitySelector
+namespace Names.TestAnswers.ActivitySelector.Entities
 {
 	public class Activity
 	{

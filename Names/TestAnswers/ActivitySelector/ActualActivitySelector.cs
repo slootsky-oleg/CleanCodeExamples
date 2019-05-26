@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Data;
+using Names.TestAnswers.ActivitySelector.Entities;
 
 namespace Names.TestAnswers.ActivitySelector
 {
 	public class ActualActivitySelector
 	{
 		public Activity Select(
-			Activity trainingProgramActivity,
-			Activity sourceTemplateActivity,
-			Activity baseLineActivity)
+			TrainingProgram trainingProgram,
+			SourceTemplate sourceTemplate,
+			BaseLine baseLine)
 		{
 			return
-				trainingProgramActivity
-				?? sourceTemplateActivity
-				?? baseLineActivity
+				trainingProgram?.Activity
+				?? sourceTemplate?.Activity
+				?? baseLine?.Activity
 				?? throw new InvalidOperationException();
 		}
 	}

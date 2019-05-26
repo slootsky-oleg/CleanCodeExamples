@@ -45,10 +45,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestAnswers\ActivitySelector\Activity.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\Entities\Activity.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\Entities\BaseLine.cs" />
     <Compile Include="TestAnswers\ActivitySelector\Demo.cs" />
     <Compile Include="TestAnswers\ActivitySelector\ActualActivitySelector.cs" />
     <Compile Include="Test.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\Entities\SourceTemplate.cs" />
+    <Compile Include="TestAnswers\ActivitySelector\Entities\TrainingProgram.cs" />
     <Compile Include="TestAnswers\NameSelector\Activity.cs" />
     <Compile Include="TestAnswers\NameSelector\ActualActivityNameSelector.cs" />
     <Compile Include="TestAnswers\NameSelector\Demo.cs" />

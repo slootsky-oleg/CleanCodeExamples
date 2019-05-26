@@ -1,20 +1,26 @@
-﻿namespace Names.TestAnswers.ActivitySelector
+﻿using Names.TestAnswers.ActivitySelector.Entities;
+
+namespace Names.TestAnswers.ActivitySelector
 {
 	public class Demo
 	{
 		public void Execute()
 		{
-			//Let's assume activities being received from an external service
-			Activity trainingProgramActivity = null;
-			Activity sourceTemplateActivity = new Activity("name in Source template");
-			Activity baseLineActivity = null;
+			//Let's assume objects being received from an external service
+
+			TrainingProgram trainingProgram = null;
+			BaseLine baseLine = null;
+			SourceTemplate sourceTemplate = new SourceTemplate()
+			{
+				Activity = new Activity("name in Source template")
+			};
 
 			var selector = new ActualActivitySelector();
 
 			var actualActivity = selector.Select(
-				trainingProgramActivity,
-				sourceTemplateActivity,
-				baseLineActivity);
+				trainingProgram,
+				sourceTemplate,
+				baseLine);
 
 			var name = actualActivity.Name;
 			var simplifiedName = actualActivity.SimplifiedName;
