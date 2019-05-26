@@ -6,11 +6,11 @@ namespace Functions.FunctionArguments._2_AfterMoveToNatureOwner
 	{
 		public void RunDemo()
 		{
-			var twoDaysMovie = new Movie(LicensingModel.TwoDays, DateTime.Now);
-			var expirationDate = twoDaysMovie.GetExpirationDate();
+			var customer = new Customer(CustomerStatus.Advanced);
 
-			var lifeLongMovie = new Movie(LicensingModel.LifeLong, DateTime.Now);
-			var price = lifeLongMovie.GetPrice(CustomerStatus.Advanced);
+			var movie = new PurchasedMovie(customer, LicensingModel.TwoDays, DateTime.Now);
+			var expirationDate = movie.GetExpirationDate();
+			var price = movie.GetPrice();
 		}
 	}
 }

@@ -8,6 +8,7 @@ namespace Functions.FunctionArguments.Before
 		{
 			var movieService = new MovieService();
 
+			//From DB
 			var purchased = DateTime.Now.AddDays(1);
 
 			var expirationDate = movieService.GetMovieExpirationDate(true, purchased);

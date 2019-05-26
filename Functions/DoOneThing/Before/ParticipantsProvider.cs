@@ -6,7 +6,7 @@ namespace Functions.DoOneThing.Before
 {
 	public class ParticipantsProvider
 	{
-		public int GetActiveCountByOrganizationalUnit(OrganizationalUnit organizationalUnit)
+		public int GetCountOfActiveParticipants(OrganizationalUnit organizationalUnit)
 		{
 			var db = new DbManager("...");
 			db.CreateCommand("[dbo].[spr_CoursesByOrganizationalUnit]");

@@ -4,14 +4,14 @@ namespace Functions.FunctionArguments._3_AfterSwitchToPolymorphism.Demo
 {
 	public class MovieFactory
 	{
-		public IMovie Create(LicensingModel licensingModel, DateTime purchased)
+		public IPurchasedMovie Create(Customer customer, LicensingModel licensingModel, DateTime purchased)
 		{
 			switch (licensingModel)
 			{
 				case LicensingModel.TwoDays:
-					return new TwoDaysMovie(purchased);
+					return new TwoDaysPurchasedMovie(customer, purchased);
 				case LicensingModel.LifeLong:
-					return new LifeLongMovie(purchased);
+					return new LifeLongPurchasedMovie(customer, purchased);
 				default:
 					throw new ArgumentOutOfRangeException(nameof(licensingModel), licensingModel, "Unknown licensing model");
 			}

@@ -2,13 +2,15 @@
 
 namespace Functions.FunctionArguments._2_AfterMoveToNatureOwner
 {
-	public class Movie
+	public class PurchasedMovie
 	{
 		public LicensingModel LicensingModel { get; }
 		public DateTime Purchased { get; }
+		public Customer Customer { get; }
 
-		public Movie(LicensingModel licensingModel, DateTime purchased)
+		public PurchasedMovie(Customer customer, LicensingModel licensingModel, DateTime purchased)
 		{
+			Customer = customer;
 			LicensingModel = licensingModel;
 			Purchased = purchased;
 		}
@@ -28,7 +30,7 @@ namespace Functions.FunctionArguments._2_AfterMoveToNatureOwner
 			}
 		}
 
-		public decimal GetPrice(CustomerStatus status)
+		public decimal GetPrice()
 		{
 			var expirationDate = GetExpirationDate();
 
@@ -46,7 +48,7 @@ namespace Functions.FunctionArguments._2_AfterMoveToNatureOwner
 					throw new ArgumentOutOfRangeException();
 			}
 
-			var hasDiscount = status == CustomerStatus.Advanced
+			var hasDiscount = Customer.Status == CustomerStatus.Advanced
 			                  && expirationDate >= DateTime.UtcNow;
 
 			if (hasDiscount)

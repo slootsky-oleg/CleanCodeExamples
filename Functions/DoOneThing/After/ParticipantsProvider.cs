@@ -11,7 +11,7 @@ namespace Functions.DoOneThing.After
 			this.courseRepository = courseRepository;
 		}
 
-		public int GetActiveCountByOrganizationalUnit(OrganizationalUnit organizationalUnit)
+		public int GetCountOfActiveParticipants(OrganizationalUnit organizationalUnit)
 		{
 			var courses = courseRepository.GetByOwner(organizationalUnit);
 
