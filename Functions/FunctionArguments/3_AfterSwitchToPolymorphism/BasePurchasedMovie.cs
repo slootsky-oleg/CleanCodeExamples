@@ -4,7 +4,9 @@ namespace Functions.FunctionArguments._3_AfterSwitchToPolymorphism
 {
 	public abstract class BasePurchasedMovie : IPurchasedMovie
 	{
-		private bool NotExpired => ExpirationDate >= DateTime.UtcNow;
+		private bool HasDiscount =>
+			Customer.IsAdvanced
+			&& ExpirationDate >= DateTime.UtcNow;
 
 		public Customer Customer { get; }
 		public DateTime Purchased { get; }
@@ -24,9 +26,7 @@ namespace Functions.FunctionArguments._3_AfterSwitchToPolymorphism
 
 		protected decimal CalculatePriceWithDiscount(decimal basePrice)
 		{
-			var hasDiscount = Customer.IsAdvanced && NotExpired;
-
-			return hasDiscount
+			return HasDiscount
 				? basePrice * 0.75m
 				: basePrice;
 		}
