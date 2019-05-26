@@ -44,11 +44,11 @@ namespace Functions.Test
 			return masterP;
 		}
 
-		public List<Participant> GetParticipants(int count, bool onlyFixedParticipants, List<Participant> participants, DateTime? fixedStart, DateTime? fixedEnd)
+		public List<Participant> GetParticipants(bool onlyFixedParticipants, List<Participant> participants, DateTime? fixedStart, DateTime? fixedEnd)
 		{
-			if (participants.Count > count )
+			if (onlyFixedParticipants)
 			{
-				participants = participants.Take(count).ToList();
+				participants.RemoveAll(x => !(x.AssignedTo >= fixedStart && x.AssignedFrom <= fixedEnd));
 			}
 
 			var result = new List<Participant>();

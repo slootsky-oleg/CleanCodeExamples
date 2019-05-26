@@ -18,8 +18,7 @@ namespace Functions.SideEffects.Before
 				}
 			}
 
-			//activities.RemoveAll(x => x.Id > 1);
-			activities = activities.Take(1).ToList();
+			activities.RemoveAll(x => x.Id > 1);
 		}
 	}
 }
