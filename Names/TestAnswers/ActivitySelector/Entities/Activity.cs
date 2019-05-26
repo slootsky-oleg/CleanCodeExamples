@@ -16,10 +16,11 @@ namespace Names.TestAnswers.ActivitySelector.Entities
 			SimplifiedName = GetSimplifiedName(name);
 		}
 
-		private string GetSimplifiedName(string name)
+		private static string GetSimplifiedName(string name)
 		{
-			var lowerCaseName = Name.ToLower();
-			return lowerCaseName.Substring(0, MaxSimplifiedNameLength);
+			return name
+				.ToLower()
+				.Substring(0, MaxSimplifiedNameLength);
 		}
 	}
 }
