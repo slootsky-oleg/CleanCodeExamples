@@ -47,6 +47,7 @@
 			};
 
 			var name = activityManager.GetName();
+			activityManager.NameInBaseLine = "new name";
 			var shortName = activityManager.GetShortName();
 		}
 	}

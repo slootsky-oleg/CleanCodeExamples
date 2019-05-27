@@ -24,7 +24,7 @@ namespace Functions.DoOneThing.After
 
 			Id = id;
 			Name = name;
-			this.participants = participants.ToList();
+			this.participants = participants?.ToList();
 		}
 	}
 }
