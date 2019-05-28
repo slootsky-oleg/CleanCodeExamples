@@ -23,7 +23,7 @@ namespace Functions.Test
 				{
 					Id = (int) mp["Id"],
 					Name = (string) mp["Name"],
-					FixedStart = (DateTime) mp["FixedStart"],
+					  FixedStart = (DateTime) mp["FixedStart"],
 					FixedEnd = (DateTime) mp["FixedEnd"],
 				};
 
@@ -70,8 +70,7 @@ namespace Functions.Test
 				}
 				else
 				{
-					participant.AssignedFrom = DateTime.MinValue;
-					participant.AssignedTo = DateTime.MaxValue;
+					result.Add(participant);
 				}
 			}
 
