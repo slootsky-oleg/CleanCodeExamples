@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectsAndDataStructures.DataAbstraction.Before
+namespace ObjectsAndDataStructures.DataAbstraction.ExposeDetails
 {
 	public class DriveService
 	{
@@ -18,6 +18,7 @@ namespace ObjectsAndDataStructures.DataAbstraction.Before
 		{
 			var consumedFuel = GetFuelConsumption(vehicle, distance);
 
+			//validate remaining - consumedFuel > 0
 			vehicle.RemainingFuel -= consumedFuel;
 		}
 

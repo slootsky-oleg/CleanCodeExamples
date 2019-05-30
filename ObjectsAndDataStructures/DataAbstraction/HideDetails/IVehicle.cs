@@ -1,4 +1,4 @@
-﻿namespace ObjectsAndDataStructures.DataAbstraction.After
+﻿namespace ObjectsAndDataStructures.DataAbstraction.HideDetails
 {
 	public interface IVehicle
 	{

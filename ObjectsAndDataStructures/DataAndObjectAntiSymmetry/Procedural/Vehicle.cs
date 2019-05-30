@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace ObjectsAndDataStructures.DataAbstraction.Before
+﻿namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.Procedural
 {
 	public class Vehicle
 	{

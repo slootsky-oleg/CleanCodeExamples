@@ -1,6 +1,7 @@
 ﻿using System;
+using ObjectsAndDataStructures.DataAbstraction.HideDetails.Values;
 
-namespace ObjectsAndDataStructures.DataAbstraction.After
+namespace ObjectsAndDataStructures.DataAbstraction.HideDetails
 {
 	public class Vehicle : IVehicle
 	{

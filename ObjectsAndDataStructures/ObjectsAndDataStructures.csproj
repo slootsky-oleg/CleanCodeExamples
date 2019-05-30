@@ -41,14 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAbstraction\After\Demo.cs" />
-    <Compile Include="DataAbstraction\After\FuelVolume.cs" />
-    <Compile Include="DataAbstraction\After\IVehicle.cs" />
-    <Compile Include="DataAbstraction\After\Tank.cs" />
-    <Compile Include="DataAbstraction\After\Vehicle.cs" />
-    <Compile Include="DataAbstraction\Before\Demo.cs" />
-    <Compile Include="DataAbstraction\Before\DriveService.cs" />
-    <Compile Include="DataAbstraction\Before\Vehicle.cs" />
+    <Compile Include="DataAbstraction\HideDetails\Demo.cs" />
+    <Compile Include="DataAbstraction\HideDetails\Values\FuelVolume.cs" />
+    <Compile Include="DataAbstraction\HideDetails\IVehicle.cs" />
+    <Compile Include="DataAbstraction\HideDetails\Values\Tank.cs" />
+    <Compile Include="DataAbstraction\HideDetails\Vehicle.cs" />
+    <Compile Include="DataAbstraction\ExposeDetails\Demo.cs" />
+    <Compile Include="DataAbstraction\ExposeDetails\DriveService.cs" />
+    <Compile Include="DataAbstraction\ExposeDetails\Vehicle.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\OO\Truck.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\OO\Demo.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\OO\Values\FuelVolume.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\OO\IVehicle.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\OO\Values\Tank.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\OO\Car.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\Procedural\Demo.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\Procedural\DriveService.cs" />
+    <Compile Include="DataAndObjectAntiSymmetry\Procedural\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

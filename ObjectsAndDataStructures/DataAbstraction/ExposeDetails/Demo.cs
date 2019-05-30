@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectsAndDataStructures.DataAbstraction.Before
+namespace ObjectsAndDataStructures.DataAbstraction.ExposeDetails
 {
 	public class Demo
 	{

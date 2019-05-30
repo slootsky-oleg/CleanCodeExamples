@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectsAndDataStructures.DataAbstraction.After
+namespace ObjectsAndDataStructures.DataAbstraction.HideDetails.Values
 {
 	public class Tank
 	{

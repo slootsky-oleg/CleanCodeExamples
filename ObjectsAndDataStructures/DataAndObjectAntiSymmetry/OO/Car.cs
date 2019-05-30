@@ -1,0 +1,34 @@
+﻿using System;
+using ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO.Values;
+
+namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO
+{
+	public class Car : IVehicle
+	{
+		private readonly Tank tank;
+
+		public double PercentFuelRemaining => tank.RemainingPercent;
+
+		public Car(FuelVolume tankCapacity, FuelVolume fuelRemaining)
+		{
+			tank = new Tank(tankCapacity, fuelRemaining);
+		}
+
+		public void Drive(double distance)
+		{
+			var consumed = GetFuelConsumption(distance);
+			tank.Consume(consumed);
+		}
+
+		public void FillTank(FuelVolume volume)
+		{
+			//ValidateFuelType();
+			//ValidateEnoughFreeVolumeInTank
+		}
+
+		private FuelVolume GetFuelConsumption(double distance)
+		{
+			throw new NotImplementedException();
+		}
+	}
+}

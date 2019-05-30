@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectsAndDataStructures.DataAbstraction.After
+namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO.Values
 {
 	public class FuelVolume
 	{
