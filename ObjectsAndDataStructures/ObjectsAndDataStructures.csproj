@@ -47,6 +47,7 @@
     <Compile Include="DataAbstraction\After\Tank.cs" />
     <Compile Include="DataAbstraction\After\Vehicle.cs" />
     <Compile Include="DataAbstraction\Before\Demo.cs" />
+    <Compile Include="DataAbstraction\Before\DriveService.cs" />
     <Compile Include="DataAbstraction\Before\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

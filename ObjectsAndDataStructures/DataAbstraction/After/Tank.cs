@@ -4,18 +4,19 @@ namespace ObjectsAndDataStructures.DataAbstraction.After
 {
 	public class Tank
 	{
+		private readonly FuelVolume capacity;
 		private FuelVolume remaining;
 
-		public FuelVolume Capacity { get; }
+		public double RemainingPercent =>
+			remaining / capacity * 100;
 
-		public double RemainingPercent => remaining / Capacity * 100;
 
 		public Tank(FuelVolume capacity, FuelVolume remaining)
 		{
 			if (capacity < remaining)
 				throw new InvalidOperationException($"Capacity {capacity} should be more than {remaining}");
 
-			Capacity = capacity;
+			this.capacity = capacity;
 			this.remaining = remaining;
 		}
 
