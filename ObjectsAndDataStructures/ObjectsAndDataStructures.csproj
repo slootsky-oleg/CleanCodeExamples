@@ -58,6 +58,10 @@
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\Demo.cs" />
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\DriveService.cs" />
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\Vehicle.cs" />
+    <Compile Include="DemeterLow\After\Wallet.cs" />
+    <Compile Include="DemeterLow\Before\Customer.cs" />
+    <Compile Include="DemeterLow\Before\Paperboy.cs" />
+    <Compile Include="DemeterLow\Before\Wallet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

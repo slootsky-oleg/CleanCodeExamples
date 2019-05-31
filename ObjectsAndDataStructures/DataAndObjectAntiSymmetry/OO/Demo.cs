@@ -11,7 +11,7 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO
 			vehicle.Drive(30);
 			vehicle.Drive(50);
 
-			//Impossible to overfill due to Vehicle hidden logic
+			//Impossible to overfill due to the Vehicle hidden logic
 			vehicle.FillTank(FuelVolume.From(15));
 		}
 
