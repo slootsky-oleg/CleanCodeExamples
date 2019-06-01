@@ -4,14 +4,14 @@ namespace ObjectsAndDataStructures.DemeterLow.After
 {
 	public class Money
 	{
-		private double Value { get; }
+		private readonly double value;
 
 		private Money(double value)
 		{
 			if (value < 0)
 				throw new ArgumentException($"Invalid value {value}");
 
-			Value = value;
+			this.value = value;
 		}
 
 		public static Money From(double value)
@@ -22,17 +22,18 @@ namespace ObjectsAndDataStructures.DemeterLow.After
 
 		public static implicit operator double(Money me)
 		{
-			return me.Value;
+			return me.value;
 		}
 
 		public static Money operator - (Money me, Money other)
 		{
-			var newValue  = me.Value - other.Value;
+			var newValue  = me.value - other.value;
 			return new Money(newValue);
 		}
+
 		public static Money operator + (Money me, Money other)
 		{
-			var newValue  = me.Value + other.Value;
+			var newValue  = me.value + other.value;
 			return new Money(newValue);
 		}
 	}

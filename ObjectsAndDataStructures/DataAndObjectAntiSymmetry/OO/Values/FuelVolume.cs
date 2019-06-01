@@ -4,14 +4,14 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO.Values
 {
 	public class FuelVolume
 	{
-		private double Value { get; }
+		private readonly double value;
 
 		private FuelVolume(double value)
 		{
 			if (value < 0)
 				throw new ArgumentException($"Invalid volume {value}");
 
-			Value = value;
+			this.value = value;
 		}
 
 		public static FuelVolume From(double value)
@@ -22,12 +22,12 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO.Values
 
 		public static implicit operator double(FuelVolume me)
 		{
-			return me.Value;
+			return me.value;
 		}
 
 		public static FuelVolume operator - (FuelVolume me, FuelVolume other)
 		{
-			var newValue  = me.Value - other.Value;
+			var newValue  = me.value - other.value;
 			return new FuelVolume(newValue);
 		}
 	}

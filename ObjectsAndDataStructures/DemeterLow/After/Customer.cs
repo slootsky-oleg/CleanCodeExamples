@@ -16,9 +16,6 @@
 
 		public void Pay(Money amount)
 		{
-			if (!wallet.Has(amount)) //also check budget etc.
-				throw new NotEnoughMoneyException(amount);
-
 			wallet.Sub(amount);
 		}
 	}
