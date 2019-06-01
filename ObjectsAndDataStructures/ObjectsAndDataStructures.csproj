@@ -58,6 +58,10 @@
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\Demo.cs" />
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\DriveService.cs" />
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\Vehicle.cs" />
+    <Compile Include="DemeterLow\After\Customer.cs" />
+    <Compile Include="DemeterLow\After\Money.cs" />
+    <Compile Include="DemeterLow\After\NotEnoughMoneyException.cs" />
+    <Compile Include="DemeterLow\After\Paperboy.cs" />
     <Compile Include="DemeterLow\After\Wallet.cs" />
     <Compile Include="DemeterLow\Before\Customer.cs" />
     <Compile Include="DemeterLow\Before\Paperboy.cs" />
