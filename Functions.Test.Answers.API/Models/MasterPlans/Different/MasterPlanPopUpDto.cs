@@ -1,5 +1,5 @@
 ﻿using Functions.Test.Answers.API.Models.Common;
-using Functions.Test.Answers.Core.After.DifferentPropertySets;
+using Functions.Test.Answers.Core.DifferentPropertySets;
 
 namespace Functions.Test.Answers.API.Models.MasterPlans.Different
 {

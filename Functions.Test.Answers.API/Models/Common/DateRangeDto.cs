@@ -1,5 +1,5 @@
 ﻿using System;
-using Functions.Test.Answers.Core.After;
+using Functions.Test.Answers.Core;
 
 namespace Functions.Test.Answers.API.Models.Common
 {

@@ -2,7 +2,7 @@
 using System.Linq;
 using Functions.Test.Answers.API.Models.Common;
 using Functions.Test.Answers.API.Models.MasterPlans.Participants;
-using Functions.Test.Answers.Core.After;
+using Functions.Test.Answers.Core;
 
 namespace Functions.Test.Answers.API.Models.MasterPlans
 {

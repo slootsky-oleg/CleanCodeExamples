@@ -3,8 +3,8 @@ using System.Web.Http;
 using Functions.Test.Answers.API.Models.MasterPlans;
 using Functions.Test.Answers.API.Models.MasterPlans.Different;
 using Functions.Test.Answers.API.Models.MasterPlans.Participants;
-using Functions.Test.Answers.Core.After;
-using Functions.Test.Answers.Core.After.DifferentPropertySets;
+using Functions.Test.Answers.Core;
+using Functions.Test.Answers.Core.DifferentPropertySets;
 
 namespace Functions.Test.Answers.API.Controllers
 {

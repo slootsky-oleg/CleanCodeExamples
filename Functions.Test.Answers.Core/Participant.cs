@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Functions.Test.Answers.Core.After
+namespace Functions.Test.Answers.Core
 {
 	public class Participant
 	{

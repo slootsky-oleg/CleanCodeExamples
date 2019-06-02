@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Functions.Test.Answers.Core.After
+namespace Functions.Test.Answers.Core
 {
 	public class MasterPlan
 	{

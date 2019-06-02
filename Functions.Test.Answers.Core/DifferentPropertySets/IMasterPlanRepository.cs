@@ -1,4 +1,4 @@
-﻿namespace Functions.Test.Answers.Core.After.DifferentPropertySets
+﻿namespace Functions.Test.Answers.Core.DifferentPropertySets
 {
 	public interface IMasterPlanRepository
 	{

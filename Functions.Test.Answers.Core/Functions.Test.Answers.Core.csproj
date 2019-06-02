@@ -41,17 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="After\DateRange.cs" />
-    <Compile Include="After\DifferentPropertySets\IMasterPlanRepository.cs" />
-    <Compile Include="After\DifferentPropertySets\MasterPlanHeader.cs" />
-    <Compile Include="After\InvalidDateRangeException.cs" />
-    <Compile Include="After\MasterPlan.cs" />
-    <Compile Include="After\Participant.cs" />
-    <Compile Include="After\SinglePropertySet\IMasterPlanRepository.cs" />
-    <Compile Include="Before\MasterPlan.cs" />
-    <Compile Include="Before\MasterPlanService.cs" />
-    <Compile Include="Before\Participant.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="DifferentPropertySets\IMasterPlanRepository.cs" />
+    <Compile Include="DifferentPropertySets\MasterPlanHeader.cs" />
+    <Compile Include="InvalidDateRangeException.cs" />
+    <Compile Include="MasterPlan.cs" />
+    <Compile Include="Participant.cs" />
+    <Compile Include="SinglePropertySet\IMasterPlanRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
