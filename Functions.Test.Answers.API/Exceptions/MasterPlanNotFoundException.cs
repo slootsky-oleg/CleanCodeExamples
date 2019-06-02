@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Functions.Test.Answers.API.Controllers
+namespace Functions.Test.Answers.API.Exceptions
 {
 	public class MasterPlanNotFoundException : Exception
 	{

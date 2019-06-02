@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Http;
+using Functions.Test.Answers.API.Exceptions;
 using Functions.Test.Answers.API.Models.MasterPlans;
 using Functions.Test.Answers.API.Models.MasterPlans.Participants;
 using Functions.Test.Answers.API.Models.MasterPlans.Single;
@@ -51,9 +52,8 @@ namespace Functions.Test.Answers.API.Controllers
 
 		private MasterPlan GetMasterPlan(long id)
 		{
-			var masterPlan = masterPlanRepository.Get(id)
+			return masterPlanRepository.Get(id)
 			                 ?? throw new MasterPlanNotFoundException(id);
-			return masterPlan;
 		}
 	}
 }

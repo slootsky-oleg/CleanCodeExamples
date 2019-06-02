@@ -86,7 +86,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DifferentMasterPlanController.cs" />
-    <Compile Include="Controllers\MasterPlanNotFoundException.cs" />
+    <Compile Include="Exceptions\MasterPlanNotFoundException.cs" />
     <Compile Include="Controllers\SingleMasterPlanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -9,7 +9,7 @@ namespace Functions.Test.Answers.Core
 
 		public DateRange(DateTime start, DateTime end)
 		{
-			if (start < end)
+			if (end < start)
 				throw new InvalidDateRangeException(start, end);
 
 			Start = start;
