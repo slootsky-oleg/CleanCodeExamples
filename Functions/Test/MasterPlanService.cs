@@ -27,18 +27,20 @@ namespace Functions.Test
 					FixedEnd = (DateTime) mp["FixedEnd"],
 				};
 
-
-				var tableParticipants = new DataTable("Participants");
-				participants = tableParticipants
-					.Select($"OwnerId = {masterP.Id}")
-					.Select(dataRow => new Participant
-				             {
-					             Id = (int) dataRow["Id"],
-					             Name = (string) dataRow["Name"],
-					             AssignedFrom = (DateTime) mp["AssignedFrom"],
-					             AssignedTo = (DateTime) mp["AssignedTo"],
-				             })
-					.ToList();
+				if (includeParticipants)
+				{
+					var tableParticipants = new DataTable("Participants");
+					participants = tableParticipants
+						.Select($"OwnerId = {masterP.Id}")
+						.Select(dataRow => new Participant
+						{
+							Id = (int) dataRow["Id"],
+							Name = (string) dataRow["Name"],
+							AssignedFrom = (DateTime) mp["AssignedFrom"],
+							AssignedTo = (DateTime) mp["AssignedTo"],
+						})
+						.ToList();
+				}
 			}
 
 			return masterP;
