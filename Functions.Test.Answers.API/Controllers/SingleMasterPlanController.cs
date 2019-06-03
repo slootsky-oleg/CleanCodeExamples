@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Http;
 using Functions.Test.Answers.API.Exceptions;
+using Functions.Test.Answers.API.Models.Common;
 using Functions.Test.Answers.API.Models.MasterPlans;
 using Functions.Test.Answers.API.Models.MasterPlans.Participants;
 using Functions.Test.Answers.API.Models.MasterPlans.Single;
@@ -39,12 +40,14 @@ namespace Functions.Test.Answers.API.Controllers
 		public IHttpActionResult GetFixedParticipants(long id)
 		{
 			var masterPlan = GetMasterPlan(id);
+			var fixedDates = new DateRangeDto(masterPlan.FixedDates);
 
-			var builder = new FixedParticipantBuilder(masterPlan);
+			//var builder = new FixedParticipantBuilder(masterPlan);
 
 			var participantsDto = masterPlan
 					.FixedParticipants
-					.Select(builder.Build);
+					//.Select(builder.Build);
+					.Select(x => new FixedParticipantDto(x, fixedDates));
 
 			return Ok(participantsDto);
 		}

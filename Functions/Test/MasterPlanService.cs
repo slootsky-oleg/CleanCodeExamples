@@ -9,6 +9,7 @@ namespace Functions.Test
 	{
 		public MasterPlan GetMasterPlanById(int id, bool includeParticipants, out List<Participant> participants)
 		{
+			//Repository
 			MasterPlan masterP = null;
 			participants = null;
 
@@ -23,7 +24,7 @@ namespace Functions.Test
 				{
 					Id = (int) mp["Id"],
 					Name = (string) mp["Name"],
-					  FixedStart = (DateTime) mp["FixedStart"],
+					FixedStart = (DateTime) mp["FixedStart"],
 					FixedEnd = (DateTime) mp["FixedEnd"],
 				};
 
@@ -50,6 +51,7 @@ namespace Functions.Test
 		{
 			if (onlyFixedParticipants)
 			{
+				//side effect
 				participants.RemoveAll(x => !(x.AssignedTo >= fixedStart && x.AssignedFrom <= fixedEnd));
 			}
 
@@ -58,6 +60,7 @@ namespace Functions.Test
 			{
 				if (onlyFixedParticipants)
 				{
+					//Put before loop
 					if (fixedStart is null || fixedEnd is null)
 					{
 						throw new ArgumentNullException();
@@ -65,6 +68,7 @@ namespace Functions.Test
 
 					if (participant.AssignedTo >= fixedStart && participant.AssignedFrom <= fixedEnd)
 					{
+						//side effect
 						participant.AssignedFrom = fixedStart.Value;
 						participant.AssignedTo = fixedEnd.Value;
 						result.Add(participant);
