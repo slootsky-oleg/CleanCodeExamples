@@ -1,4 +1,4 @@
-﻿namespace ObjectsAndDataStructures.DemeterLow.Before
+﻿namespace ObjectsAndDataStructures.DemeterLowAndTellDontAsk.Before
 {
 	public class Wallet
 	{

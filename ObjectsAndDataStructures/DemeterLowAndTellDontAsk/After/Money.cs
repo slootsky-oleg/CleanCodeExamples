@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectsAndDataStructures.DemeterLow.After
+namespace ObjectsAndDataStructures.DemeterLowAndTellDontAsk.After
 {
 	public class Money
 	{

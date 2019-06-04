@@ -7,7 +7,7 @@ namespace ObjectsAndDataStructures.DataAbstraction.ExposeDetails
 		public Vehicle Create()
 		{
 			var vehicle = new Vehicle();
-			vehicle.TankCapacity = 40;	//What if TankCapacity = 5?
+			vehicle.TankCapacity = 40;	//What if  we put TankCapacity = 5?
 			vehicle.RemainingFuel = 40;
 
 			return vehicle;

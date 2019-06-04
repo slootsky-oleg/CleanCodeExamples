@@ -1,4 +1,4 @@
-﻿namespace ObjectsAndDataStructures.DemeterLow.After
+﻿namespace ObjectsAndDataStructures.DemeterLowAndTellDontAsk.After
 {
 	public class Customer
 	{
