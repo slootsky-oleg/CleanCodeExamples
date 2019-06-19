@@ -14,6 +14,7 @@ namespace ObjectsAndDataStructures.DemeterLawAndTellDontAsk.After
 			catch (Exception e)
 			{
 				// come back later
+				// log
 			}
 		}
 	}
