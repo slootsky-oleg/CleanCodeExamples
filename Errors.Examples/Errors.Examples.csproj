@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExternalAPI\Before\DataBaseClient.cs" />
+    <Compile Include="ExternalAPI\After\Demo.cs" />
+    <Compile Include="ExternalAPI\After\LegacyConnectionAdapter.cs" />
+    <Compile Include="ExternalAPI\After\LegacyConnectionAdapterException.cs" />
+    <Compile Include="ExternalAPI\After\ParticipantRepository.cs" />
+    <Compile Include="ExternalAPI\Utils\Participant.cs" />
+    <Compile Include="ExternalAPI\Utils\AccessDeniedException.cs" />
+    <Compile Include="ExternalAPI\Before\ParticipantRepository.cs" />
+    <Compile Include="ExternalAPI\Utils\DatabaseNotFoundException.cs" />
+    <Compile Include="ExternalAPI\Before\Demo.cs" />
+    <Compile Include="ExternalAPI\Utils\InvalidSQLOperationException.cs" />
+    <Compile Include="ExternalAPI\Utils\LegacyDatabaseConnection.cs" />
+    <Compile Include="ExternalAPI\Utils\Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
