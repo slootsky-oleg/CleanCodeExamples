@@ -47,7 +47,6 @@
     <Compile Include="Exceptions\PlacingBidException.cs" />
     <Compile Include="Exceptions\AuctionWinnerNotDeterminedException.cs" />
     <Compile Include="Bid.cs" />
-    <Compile Include="Demo.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
