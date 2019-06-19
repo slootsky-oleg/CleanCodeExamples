@@ -58,14 +58,14 @@
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\Demo.cs" />
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\DriveService.cs" />
     <Compile Include="DataAndObjectAntiSymmetry\Procedural\Vehicle.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\After\Customer.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\After\Money.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\After\NotEnoughMoneyException.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\After\Paperboy.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\After\Wallet.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\Before\Customer.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\Before\Paperboy.cs" />
-    <Compile Include="DemeterLowAndTellDontAsk\Before\Wallet.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\After\Customer.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\After\Money.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\After\NotEnoughMoneyException.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\After\Paperboy.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\After\Wallet.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\Before\Customer.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\Before\Paperboy.cs" />
+    <Compile Include="DemeterLawAndTellDontAsk\Before\Wallet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
