@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestAnswers", "TestAnswers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectsAndStructures.Test.Answers.Auction.OOP", "ObjectsAndStructures.Test.Answers.Auction.OOP\ObjectsAndStructures.Test.Answers.Auction.OOP.csproj", "{226B4771-E565-4A7D-A82E-3AA7937991B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectsAndStructures.Test.Answers.Auction.OOP.Tests", "ObjectsAndStructures.Test.Answers.Auction.OOP.Tests\ObjectsAndStructures.Test.Answers.Auction.OOP.Tests.csproj", "{1A608A1B-3044-4CD0-B426-EEA67ED26E13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{226B4771-E565-4A7D-A82E-3AA7937991B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{226B4771-E565-4A7D-A82E-3AA7937991B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{226B4771-E565-4A7D-A82E-3AA7937991B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A608A1B-3044-4CD0-B426-EEA67ED26E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A608A1B-3044-4CD0-B426-EEA67ED26E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A608A1B-3044-4CD0-B426-EEA67ED26E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A608A1B-3044-4CD0-B426-EEA67ED26E13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{44F15D4A-E9FC-44C2-AF6E-D348ADCD320B} = {86221D73-9822-4DA6-9A0F-D0A2A940B592}
 		{057E8CF9-AE6B-43F2-9FB6-1735A422EF5E} = {1140E696-DFCA-40A2-A4D8-0D142B0E8EE4}
 		{226B4771-E565-4A7D-A82E-3AA7937991B1} = {057E8CF9-AE6B-43F2-9FB6-1735A422EF5E}
+		{1A608A1B-3044-4CD0-B426-EEA67ED26E13} = {057E8CF9-AE6B-43F2-9FB6-1735A422EF5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B231AFE5-74DA-4F1A-891D-FC14AEF4706C}

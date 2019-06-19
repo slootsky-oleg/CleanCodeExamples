@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectsAndDataStructures.DemeterLawAndTellDontAsk.After
+namespace ObjectsAndStructures.Test.Answers.Auction.OOP
 {
 	public class Money
 	{
@@ -27,7 +27,7 @@ namespace ObjectsAndDataStructures.DemeterLawAndTellDontAsk.After
 
 		public static Money operator -(Money me, Money other)
 		{
-			var newValue  = me.value - other.value;
+			var newValue = me.value - other.value;
 			return new Money(newValue);
 		}
 
