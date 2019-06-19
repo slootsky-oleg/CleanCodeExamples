@@ -133,9 +133,30 @@ namespace Tests
 
 			auction.Close();
 
-			Action act = () => { auction.Close(); };
-
-			act.Should().ThrowExactly<ClosingAuctionException>();
+			auction.WinningBid.Should().Be(bid);
 		}
+
+		[Test]
+		public void WinningBid_WhenIsActive_ThrowError()
+		{
+			var minAmount = Money.From(1);
+			var auction = new Auction(minAmount);
+
+			Func<Bid> act = () => auction.WinningBid;
+
+			act.Should().ThrowExactly<AuctionWinnerNotDeterminedException>();
+		}
+
+		[Test]
+		public void WinningBid_WhenIsClosedAndHasNoWinner_ReturnNull()
+		{
+			var minAmount = Money.From(1);
+			var auction = new Auction(minAmount);
+
+			auction.Close();
+
+			auction.WinningBid.Should().BeNull();
+		}
+
 	}
 }

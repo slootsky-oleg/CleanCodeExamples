@@ -28,6 +28,7 @@ namespace ObjectsAndStructures.Test.Answers.Auction.OOP
 		public Auction(Money minBidAmount)
 		{
 			this.minBidAmount = minBidAmount;
+
 			this.bids = new List<Bid>();
 			this.IsActive = true;
 		}

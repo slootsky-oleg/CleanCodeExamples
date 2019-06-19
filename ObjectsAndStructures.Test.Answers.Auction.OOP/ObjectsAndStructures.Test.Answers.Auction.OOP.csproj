@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auction.cs" />
+    <Compile Include="AuctionController.cs" />
     <Compile Include="Exceptions\ClosingAuctionException.cs" />
     <Compile Include="Exceptions\PlacingBidException.cs" />
     <Compile Include="Exceptions\AuctionWinnerNotDeterminedException.cs" />
