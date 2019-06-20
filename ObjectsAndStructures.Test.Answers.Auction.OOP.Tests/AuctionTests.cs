@@ -13,8 +13,7 @@ namespace Tests
 		[Test]
 		public void NewAuction_ShouldBeActive()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			auction.IsActive.Should().BeTrue();
 		}
@@ -22,8 +21,7 @@ namespace Tests
 		[Test]
 		public void NewAuction_BidsShouldBeEmpty()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			auction.Bids.Should().BeEmpty();
 		}
@@ -31,10 +29,9 @@ namespace Tests
 		[Test]
 		public void PlaceBid_WhenBidLessThanMinBid_ThrowError()
 		{
-			var minAmount = Money.From(10);
-			var auction = new Auction(minAmount);
-
+			var auction = CreateAuction(10);
 			var bid = new Bid(Money.From(5));
+
 			Action act = () => { auction.PlaceBid(bid); };
 
 			act.Should().ThrowExactly<PlacingBidException>();
@@ -43,8 +40,7 @@ namespace Tests
 		[Test]
 		public void PlaceBid_WhenBidLessThanHighestBid_ThrowError()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			var highestBid = new Bid(Money.From(50));
 			auction.PlaceBid(highestBid);
@@ -58,11 +54,11 @@ namespace Tests
 		[Test]
 		public void PlaceBid_WhenBidLargerThanMinBid_ShouldUpdateBids()
 		{
-			var minAmount = Money.From(10);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(10);
 
 			var bid = new Bid(Money.From(50));
 			auction.PlaceBid(bid);
+
 
 			auction.HighestBid.Should().Be(bid);
 			auction.Bids.Count.Should().Be(1);
@@ -72,8 +68,7 @@ namespace Tests
 		[Test]
 		public void PlaceBid_WhenBidLargerThanHighestBid_ShouldUpdateBids()
 		{
-			var minAmount = Money.From(10);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(10);
 
 			var bids = new List<Bid>
 			{
@@ -89,11 +84,10 @@ namespace Tests
 		[Test]
 		public void PlaceBid_WhenNotActive_ThrowError()
 		{
-			var minAmount = Money.From(1);
-			var bid = new Bid(Money.From(5));
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 			auction.Close();
 
+			var bid = new Bid(Money.From(5));
 			Action act = () => { auction.PlaceBid(bid); };
 
 			act.Should().ThrowExactly<PlacingBidException>();
@@ -102,8 +96,7 @@ namespace Tests
 		[Test]
 		public void Close_WhenIsActive_ShouldSetIsActiveToFalse()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			auction.Close();
 
@@ -113,8 +106,7 @@ namespace Tests
 		[Test]
 		public void Close_WhenNotActive_ThrowError()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 			auction.Close();
 
 			Action act = () => { auction.Close(); };
@@ -125,11 +117,11 @@ namespace Tests
 		[Test]
 		public void WinningBid_WhenIsClosedAndHasWinner_ReturnHighestBid()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			var bid = new Bid(Money.From(70));
 			auction.PlaceBid(bid);
+
 
 			auction.Close();
 
@@ -139,8 +131,7 @@ namespace Tests
 		[Test]
 		public void WinningBid_WhenIsActive_ThrowError()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			Func<Bid> act = () => auction.WinningBid;
 
@@ -150,13 +141,17 @@ namespace Tests
 		[Test]
 		public void WinningBid_WhenIsClosedAndHasNoWinner_ReturnNull()
 		{
-			var minAmount = Money.From(1);
-			var auction = new Auction(minAmount);
+			var auction = CreateAuction(1);
 
 			auction.Close();
 
 			auction.WinningBid.Should().BeNull();
 		}
 
+		private static Auction CreateAuction(double minAmount)
+		{
+			var money = Money.From(minAmount);
+			return new Auction(money);
+		}
 	}
 }
