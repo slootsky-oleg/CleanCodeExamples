@@ -7,7 +7,7 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.Procedural
 		public Vehicle Create()
 		{
 			var vehicle = new Vehicle();
-			vehicle.TankCapacity = 40;	//What if TankCapacity = 5?
+			vehicle.TankCapacity = 40;
 			vehicle.RemainingFuel = 40;
 
 			return vehicle;

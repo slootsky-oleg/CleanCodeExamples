@@ -25,15 +25,15 @@ namespace ObjectsAndDataStructures.DemeterLawAndTellDontAsk.After
 			return me.value;
 		}
 
-		public static Money operator - (Money me, Money other)
+		public static Money operator -(Money me, Money other)
 		{
-			var newValue  = me.value - other.value;
+			var newValue = me.value - other.value;
 			return new Money(newValue);
 		}
 
-		public static Money operator + (Money me, Money other)
+		public static Money operator +(Money me, Money other)
 		{
-			var newValue  = me.value + other.value;
+			var newValue = me.value + other.value;
 			return new Money(newValue);
 		}
 	}

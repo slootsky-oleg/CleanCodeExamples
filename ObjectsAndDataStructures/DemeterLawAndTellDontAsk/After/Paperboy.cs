@@ -11,7 +11,7 @@ namespace ObjectsAndDataStructures.DemeterLawAndTellDontAsk.After
 			{
 				customer.Pay(payment);
 			}
-			catch (Exception e)
+			catch (NotEnoughMoneyException e)
 			{
 				// come back later
 				// log

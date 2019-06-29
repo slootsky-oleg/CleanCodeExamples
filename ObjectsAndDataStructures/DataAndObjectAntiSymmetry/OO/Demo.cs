@@ -7,21 +7,15 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO
 	{
 		public void RunDemo()
 		{
-			var vehicle = InitVehicle();
-			vehicle.Drive(30);
-			vehicle.Drive(50);
-
-			//Impossible to overfill due to the Vehicle hidden logic
-			vehicle.FillTank(FuelVolume.From(15));
-		}
-
-
-		private IVehicle InitVehicle()
-		{
 			var tankCapacity = FuelVolume.From(40);
 			var remainingFuel = FuelVolume.From(40);
+			IVehicle car = new Car(tankCapacity, remainingFuel);
 
-			return new Car(tankCapacity, remainingFuel);
+			car.Drive(30);
+			car.Drive(50);
+
+			//Impossible to overfill due to the Vehicle hidden logic
+			car.FillTank(FuelVolume.From(15));
 		}
 	}
 }
