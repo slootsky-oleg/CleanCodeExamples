@@ -7,23 +7,16 @@ namespace ObjectsAndDataStructures.DataAbstraction.HideDetails
 	{
 		public void RunDemo()
 		{
-			var vehicle = InitVehicle();
-			Console.WriteLine($"Starting. Fuel {vehicle.PercentFuelRemaining}%");	//100%
-
-			vehicle.Drive(30);
-			Console.WriteLine($"Starting. Fuel {vehicle.PercentFuelRemaining}%");	//100%
-
-			vehicle.Drive(50);
-			Console.WriteLine($"Starting. Fuel {vehicle.PercentFuelRemaining}%");	//100%
-		}
-
-
-		private IVehicle InitVehicle()
-		{
 			var tankCapacity = FuelVolume.From(40);
 			var remainingFuel = FuelVolume.From(40);
+			var car = new Car(tankCapacity, remainingFuel);
+			Console.WriteLine($"Starting. Fuel {car.PercentFuelRemaining}%");
 
-			return new Vehicle(tankCapacity, remainingFuel);
+			car.Drive(30);
+			Console.WriteLine($"Starting. Fuel {car.PercentFuelRemaining}%");
+
+			car.Drive(50);
+			Console.WriteLine($"Starting. Fuel {car.PercentFuelRemaining}%");
 		}
 	}
 }

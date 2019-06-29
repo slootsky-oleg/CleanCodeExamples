@@ -25,9 +25,9 @@ namespace ObjectsAndDataStructures.DataAbstraction.HideDetails.Values
 			return me.Value;
 		}
 
-		public static FuelVolume operator - (FuelVolume me, FuelVolume other)
+		public static FuelVolume operator -(FuelVolume me, FuelVolume other)
 		{
-			var newValue  = me.Value - other.Value;
+			var newValue = me.Value - other.Value;
 			return new FuelVolume(newValue);
 		}
 	}

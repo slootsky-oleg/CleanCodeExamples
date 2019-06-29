@@ -8,9 +8,7 @@ namespace ObjectsAndDataStructures.DataAbstraction.ExposeDetails
 		{
 			var service = new DriveService();
 
-			var vehicle = new Vehicle();
-			vehicle.TankCapacity = 40;	//What if TankCapacity = 5?
-			vehicle.RemainingFuel = 40;
+			var vehicle = service.Create(40, 40);
 
 			var percentFuelRemaining = vehicle.RemainingFuel / vehicle.TankCapacity * 100;
 			Console.WriteLine($"Starting. Fuel {percentFuelRemaining}%");	//100%

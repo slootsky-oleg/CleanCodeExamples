@@ -3,13 +3,13 @@ using ObjectsAndDataStructures.DataAbstraction.HideDetails.Values;
 
 namespace ObjectsAndDataStructures.DataAbstraction.HideDetails
 {
-	public class Vehicle : IVehicle
+	public class Car : IVehicle
 	{
 		private readonly Tank tank;
 
 		public double PercentFuelRemaining => tank.RemainingPercent;
 
-		public Vehicle(FuelVolume tankCapacity, FuelVolume fuelRemaining)
+		public Car(FuelVolume tankCapacity, FuelVolume fuelRemaining)
 		{
 			tank = new Tank(tankCapacity, fuelRemaining);
 		}

@@ -45,7 +45,7 @@
     <Compile Include="DataAbstraction\HideDetails\Values\FuelVolume.cs" />
     <Compile Include="DataAbstraction\HideDetails\IVehicle.cs" />
     <Compile Include="DataAbstraction\HideDetails\Values\Tank.cs" />
-    <Compile Include="DataAbstraction\HideDetails\Vehicle.cs" />
+    <Compile Include="DataAbstraction\HideDetails\Car.cs" />
     <Compile Include="DataAbstraction\ExposeDetails\Demo.cs" />
     <Compile Include="DataAbstraction\ExposeDetails\DriveService.cs" />
     <Compile Include="DataAbstraction\ExposeDetails\Vehicle.cs" />
