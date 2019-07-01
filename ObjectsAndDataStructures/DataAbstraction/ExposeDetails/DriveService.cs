@@ -16,6 +16,7 @@ namespace ObjectsAndDataStructures.DataAbstraction.ExposeDetails
 
 		public void Drive(Vehicle vehicle, double distance)
 		{
+			//validate distance > 0
 			var consumedFuel = GetFuelConsumption(vehicle, distance);
 
 			//validate remaining - consumedFuel > 0

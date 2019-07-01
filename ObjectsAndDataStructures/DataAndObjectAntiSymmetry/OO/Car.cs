@@ -23,7 +23,7 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO
 		public void FillTank(FuelVolume volume)
 		{
 			//ValidateFuelType();
-			//ValidateEnoughFreeVolumeInTank
+			tank.Fill(volume);
 		}
 
 		private FuelVolume GetFuelConsumption(double distance)

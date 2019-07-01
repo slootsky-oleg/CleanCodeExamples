@@ -9,7 +9,7 @@ namespace ObjectsAndDataStructures.DataAbstraction.HideDetails
 		{
 			var tankCapacity = FuelVolume.From(40);
 			var remainingFuel = FuelVolume.From(40);
-			var car = new Car(tankCapacity, remainingFuel);
+			IVehicle car = new Car(tankCapacity, remainingFuel);
 			Console.WriteLine($"Starting. Fuel {car.PercentFuelRemaining}%");
 
 			car.Drive(30);

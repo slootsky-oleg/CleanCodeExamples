@@ -25,7 +25,7 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO.Values
 			return me.value;
 		}
 
-		public static FuelVolume operator - (FuelVolume me, FuelVolume other)
+		public static FuelVolume operator -(FuelVolume me, FuelVolume other)
 		{
 			var newValue  = me.value - other.value;
 			return new FuelVolume(newValue);

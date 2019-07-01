@@ -25,5 +25,14 @@ namespace ObjectsAndDataStructures.DataAndObjectAntiSymmetry.OO.Values
 			//Validation value < 0 is already implemented in the FuelVolume
 			remaining = remaining - volume;
 		}
+
+		public void Fill(FuelVolume volume)
+		{
+			var newVolume = remaining + volume;
+			if (capacity < newVolume)
+				throw new InvalidOperationException($"Not enough capacity");
+
+			remaining = FuelVolume.From(newVolume);
+		}
 	}
 }
