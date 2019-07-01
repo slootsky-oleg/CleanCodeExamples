@@ -6,11 +6,13 @@ namespace ObjectsAndStructures.Test.Answers.Auction.OOP
 	{
 		public Auction Create(Money minAmount)
 		{
+			//Consider return AuctionDto for public API
 			return new Auction(minAmount);
 		}
 
 		public Bid GetHighestBid(Auction auction)
 		{
+			//Consider return BidDto for public API
 			return auction.HighestBid;
 		}
 
