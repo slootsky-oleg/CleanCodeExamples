@@ -2,7 +2,7 @@
 using System.Data;
 using Errors.Examples.ExternalAPI.Utils;
 
-namespace Errors.Examples.ExternalAPI.After
+namespace Errors.Examples.ExternalAPI.After.Core
 {
 	public class ParticipantRepository
 	{

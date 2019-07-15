@@ -1,10 +1,11 @@
 ﻿using System;
+using Errors.Examples.ExternalAPI.Utils;
 
 namespace Errors.Examples.ExternalAPI.After
 {
-	public class LegacyConnectionAdapterException : Exception
+	public class ParticipantDto
 	{
-		public LegacyConnectionAdapterException(string s)
+		public ParticipantDto(Participant participant)
 		{
 			throw new NotImplementedException();
 		}

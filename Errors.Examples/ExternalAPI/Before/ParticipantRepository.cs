@@ -9,6 +9,11 @@ namespace Errors.Examples.ExternalAPI.Before
 	{
 		private readonly string connectionString;
 
+		public ParticipantRepository(string connectionString)
+		{
+			this.connectionString = connectionString;
+		}
+
 		public Participant Get(long id)
 		{
 			try
@@ -23,6 +28,7 @@ namespace Errors.Examples.ExternalAPI.Before
 			{
 				Logger.Log($"DB {e.Database} not found in server {e.Server}.");
 				throw;
+				//throw e;
 			}
 			catch (AccessDeniedException e)
 			{
@@ -38,7 +44,7 @@ namespace Errors.Examples.ExternalAPI.Before
 			}
 			catch (InvalidSQLOperationException e)
 			{
-				Logger.Log("");
+				Logger.Log(e.Message);
 				throw;
 			}
 			catch (TimeoutException e)

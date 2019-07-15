@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Data;
 using System.Threading;
+using Errors.Examples.ExternalAPI.After.Exceptions;
 using Errors.Examples.ExternalAPI.Utils;
 
-namespace Errors.Examples.ExternalAPI.After
+namespace Errors.Examples.ExternalAPI.After.Core
 {
 	public class LegacyConnectionAdapter : IDisposable
 	{
 		private readonly string connectionString;
 		private readonly int maxRetryAttempts;
 		private readonly TimeSpan retryInterval;
-		private int retryAttempts;
 
 		public LegacyConnectionAdapter(string connectionString, int maxRetryAttempts, TimeSpan retryInterval)
 		{
-			this.retryAttempts = 0;
-
 			this.connectionString = connectionString
 			                        ?? throw new ArgumentNullException(nameof(connectionString));
 
