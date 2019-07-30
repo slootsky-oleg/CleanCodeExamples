@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoOneThing\After\PayDelivery.cs" />
+    <Compile Include="DoOneThing\Employee.cs" />
+    <Compile Include="DoOneThing\Money.cs" />
+    <Compile Include="DoOneThing\Before\PayDelivery.cs" />
     <Compile Include="FeatureEnvy\After\HourlyEmployee.cs" />
     <Compile Include="FeatureEnvy\But\HourlyEmployee.cs" />
     <Compile Include="FeatureEnvy\But\HourlyEmployeeReport.cs" />
@@ -50,6 +54,15 @@
     <Compile Include="FeatureEnvy\Common\Salary.cs" />
     <Compile Include="FeatureEnvy\Common\Week.cs" />
     <Compile Include="FeatureEnvy\Common\WorkingReport.cs" />
+    <Compile Include="LogicalDependencies\AfterFirst\HourlyReporter.cs" />
+    <Compile Include="LogicalDependencies\AfterFirst\HourlyReportFormatter.cs" />
+    <Compile Include="LogicalDependencies\AfterSecond\HourlyReporter.cs" />
+    <Compile Include="LogicalDependencies\AfterSecond\HourlyReportFormatter.cs" />
+    <Compile Include="LogicalDependencies\Before\HourlyReportFormatter.cs" />
+    <Compile Include="LogicalDependencies\LineItem.cs" />
+    <Compile Include="LogicalDependencies\Money.cs" />
+    <Compile Include="LogicalDependencies\HourlyEmployee.cs" />
+    <Compile Include="LogicalDependencies\Before\HourlyReporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
