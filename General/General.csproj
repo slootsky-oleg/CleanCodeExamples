@@ -41,6 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseClassDependsOnDerivatives\BasePurchasedMovie.cs" />
+    <Compile Include="BaseClassDependsOnDerivatives\Customer.cs" />
+    <Compile Include="BaseClassDependsOnDerivatives\CustomerStatus.cs" />
+    <Compile Include="BaseClassDependsOnDerivatives\IPurchasedMovie.cs" />
+    <Compile Include="BaseClassDependsOnDerivatives\LifeLongPurchasedMovie.cs" />
+    <Compile Include="BaseClassDependsOnDerivatives\TwoDaysPurchasedMovie.cs" />
+    <Compile Include="Casting\AfterOverloading\SizeCalculator.cs" />
+    <Compile Include="Casting\Before\SizeCalculator.cs" />
     <Compile Include="DoOneThing\After\PayDelivery.cs" />
     <Compile Include="DoOneThing\Employee.cs" />
     <Compile Include="DoOneThing\Money.cs" />
