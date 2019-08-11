@@ -72,7 +72,10 @@
     <Compile Include="LogicalDependencies\HourlyEmployee.cs" />
     <Compile Include="LogicalDependencies\Before\HourlyReporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static\IMyInterface.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ArtificialCoupling\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

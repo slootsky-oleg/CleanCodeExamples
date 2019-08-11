@@ -9,12 +9,12 @@ namespace General.LogicalDependencies.AfterSecond
 
 		public void Add(LineItem reportItem)
 		{
-			throw new NotImplementedException();
+			//pagination logic
 		}
 
 		public void Generate()
 		{
-			throw new NotImplementedException();
+			//print by pages
 		}
 	}
 }

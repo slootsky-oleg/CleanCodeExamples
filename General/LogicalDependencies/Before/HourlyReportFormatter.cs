@@ -7,7 +7,7 @@ namespace General.LogicalDependencies.Before
 	{
 		public void Format(IEnumerable<LineItem> page)
 		{
-			throw new NotImplementedException();
+			//Print logic
 		}
 	}
 }
